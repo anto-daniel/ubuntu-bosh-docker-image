@@ -5,4 +5,5 @@ RUN wget https://github.com/cloudfoundry-incubator/credhub-cli/releases/download
 RUN wget https://releases.hashicorp.com/vault/1.4.2/vault_1.4.2_linux_amd64.zip && unzip vault_1.4.2_linux_amd64.zip -d /usr/local/bin
 RUN wget https://github.com/cloudfoundry/bosh-cli/releases/download/v6.0.0/bosh-cli-6.0.0-linux-amd64 && chmod a+x ./bosh-cli-6.0.0-linux-amd64 && mv ./bosh-cli-6.0.0-linux-amd64 /usr/local/bin/bosh
 RUN wget https://packages.cloudfoundry.org/stable\?release\=linux64-binary\&version\=6.53.0\&source\=github-rel && mv stable\?release\=linux64-binary\&version\=6.53.0\&source\=github-rel cf.tar.gz && tar xvzf cf.tar.gz -C /usr/local/bin
+RUN wget https://golang.org/dl/go1.15.7.linux-amd64.tar.gz && tar -C /usr/local -xzf go1.15.7.linux-amd64.tar.gz
 RUN ls /usr/local/bin/bosh && echo bosh client done && ls /usr/local/bin/credhub && echo credhub done && ls /usr/local/bin/vault && echo vault done
